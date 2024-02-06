@@ -3,101 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rootin Tootin Match Rodeo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
 </head>
 <body>
-    
+    <div class="board" id="board"></div>
+    <div id="flips-remaining">Flips Remaining: <span id="flips-count">20</span></div>
+    <button id="reset-button">Reset</button>
 </body>
 </html>
-
-
-<!--================== Example 1 (Google AI simple JavaScript match game)====================
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Match Game</title>
-  <style>
-    .card {
-      width: 100px;
-      height: 100px;
-      background-color: #000;
-      color: #fff;
-      font-size: 20px;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .card.flipped {
-      background-color: #fff;
-      color: #000;
-    }
-  </style>
-</head>
-<body>
-  <h1>Match Game</h1>
-  <div id="game-board"></div>
-
-  <script>
-    // Create an array of cards
-    const cards = ["A", "A", "B", "B", "C", "C", "D", "D"];
-
-    // Shuffle the cards
-    cards.sort(() => Math.random() - 0.5);
-
-    // Create the game board
-    const gameBoard = document.querySelector("#game-board");
-    for (let i = 0; i < cards.length; i++) {
-      const card = document.createElement("div");
-      card.classList.add("card");
-      card.textContent = cards[i];
-      gameBoard.appendChild(card);
-    }
-
-    // Flip a card when clicked
-    gameBoard.addEventListener("click", (event) => {
-      const card = event.target;
-      card.classList.toggle("flipped");
-    });
-
-    // Check if two cards match
-    function checkMatch() {
-      const flippedCards = gameBoard.querySelectorAll(".flipped");
-      if (flippedCards.length === 2) {
-        if (flippedCards[0].textContent === flippedCards[1].textContent) {
-          // Cards match!
-          flippedCards[0].classList.add("matched");
-          flippedCards[1].classList.add("matched");
-        } else {
-          // Cards don't match
-          flippedCards[0].classList.remove("flipped");
-          flippedCards[1].classList.remove("flipped");
-        }
-      }
-    }
-
-    // Check for a winner
-    function checkWinner() {
-      const matchedCards = gameBoard.querySelectorAll(".matched");
-      if (matchedCards.length === cards.length) {
-        // Winner!
-        alert("You win!");
-      }
-    }
-
-    // Start the game
-    setInterval(checkMatch, 100);
-    setInterval(checkWinner, 100);
-  </script>
-</body>
-</html>
-==================== Example 1 ==================================
--->
-
-<!-- =============== Example 2 (Code Sketch Memory Game) ====================
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Memory Game</title>
--->

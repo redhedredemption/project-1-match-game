@@ -1,6 +1,7 @@
 body {
   background-color: teal;
-  font-family: 'Vast Shadow', cursive;
+  font-family: 'Vast Shadow';
+  color: AntiqueWhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +13,7 @@ body {
 }
 
 .board {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -21,7 +23,9 @@ body {
   width: 100px;
   height: 100px;
   perspective: 1000px;
+
 }
+
 
 .inner {
   width: 100%;
@@ -52,9 +56,21 @@ body {
 }
 
 .back {
-  background-image: url("https://placehold.co/400");
+  /* background-image: url("https://placehold.co/400"); */
   background-size: cover;
   transform: rotateY(180deg);
+}
+
+#message-box {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: antiquewhite;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 #flips-remaining {
@@ -65,6 +81,9 @@ body {
 
 #reset-button {
   display: block;
+  font-family: 'Vast Shadow';
+  color: AntiqueWhite;
+  background: darkslategrey;
   padding: 10px 20px;
   margin-top: 20px;
 }
@@ -80,3 +99,8 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.front:hover {
+  background-color: AntiqueWhite;
+  }
+

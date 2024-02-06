@@ -18,12 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: 8 }
   ];
 
+
+
   const board = document.getElementById("board");
   const flipsCount = document.getElementById("flips-count");
   const resetButton = document.getElementById("reset-button");
+  const messageBox = document.getElementById("message-box");
 
   let flippedCards = [];
   let remainingFlips = 20;
+
+  /*
+  Used this article for ideas on how to create the shuffled array of cards:
+  https://www.geeksforgeeks.org/javascript-program-to-shuffle-deck-of-cards/
+  */
 
   function createCard(cardData) {
     const card = document.createElement("div");
@@ -38,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const back = document.createElement("div");
     back.classList.add("back");
+    back.innerText = cardData.id;
 
     inner.appendChild(front);
     inner.appendChild(back);
@@ -49,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return card;
   }
 
+
   function flipCard(card) {
     if (flippedCards.length < 2 && !flippedCards.includes(card)) {
       card.classList.add("flipped");
@@ -58,60 +68,73 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(checkMatch, 1000);
       }
     }
+    remainingFlips--;
+    flipsCount.textContent = remainingFlips;
   }
+
+
 
   function checkMatch() {
     const [card1, card2] = flippedCards;
 
     if (card1.dataset.id === card2.dataset.id) {
-      alert("Match!");
+      showMessage("Match!");
       flippedCards = [];
     } else {
-      alert("Try again");
+      showMessage("Try again");
       card1.classList.remove("flipped");
       card2.classList.remove("flipped");
       flippedCards = [];
     }
 
-    remainingFlips--;
-    flipsCount.textContent = remainingFlips;
-
     if (remainingFlips === 0) {
-      alert("Game over!");
+      showMessage("Game over!");
       resetGame();
     }
-  }
 
-  function resetGame() {
-    remainingFlips = 20;
-    flipsCount.textContent = remainingFlips;
-
-    flippedCards.forEach(card => card.classList.remove("flipped"));
-    flippedCards = [];
-
-    setTimeout(() => {
-      board.innerHTML = "";
-      shuffleCards();
-      renderBoard();
-    }, 1000);
-  }
-
-  function shuffleCards() {
-    for (let i = cards.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [cards[i], cards[j]] = [cards[j], cards[i]];
+    const allMatched = document.querySelectorAll('.card').every(card => card.classList.contains('flipped'));
+    if (allMatched) {
+      showMessage("You win!");
     }
-  }
 
-  function renderBoard() {
-    cards.forEach(cardData => {
-      const card = createCard(cardData);
-      board.appendChild(card);
-    });
-  }
+    }
 
-  resetButton.addEventListener("click", resetGame);
 
-  shuffleCards();
-  renderBoard();
-});
+    function showMessage(message) {
+      messageBox.textContent = message;
+      messageBox.style.display = "block";
+    }
+
+    function resetGame() {
+      remainingFlips = 20;
+      flipsCount.textContent = remainingFlips;
+
+      flippedCards.forEach(card => card.classList.remove("flipped"));
+      flippedCards = [];
+
+      setTimeout(() => {
+        board.innerHTML = "";
+        shuffleCards();
+        renderBoard();
+      }, 1000);
+    }
+
+    function shuffleCards() {
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+    }
+
+    function renderBoard() {
+      cards.forEach(cardData => {
+        const card = createCard(cardData);
+        board.appendChild(card);
+      });
+    }
+
+    resetButton.addEventListener("click", resetGame);
+
+    shuffleCards();
+    renderBoard();
+  });

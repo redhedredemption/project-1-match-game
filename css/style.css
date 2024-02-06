@@ -1,5 +1,6 @@
 body {
   background-color: teal;
+  font-family: 'Vast Shadow', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,3 +69,14 @@ body {
   margin-top: 20px;
 }
 
+.vast-shadow-regular {
+  font-family: "Vast Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cutive-regular {
+  font-family: "Cutive", serif;
+  font-weight: 400;
+  font-style: normal;
+}

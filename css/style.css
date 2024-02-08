@@ -17,6 +17,22 @@ body {
   margin: 0;
 }
 
+.heading {
+  text-align: center;
+  text-align: top;
+  font-size: 45px;
+  color: AntiqueWhite;
+  margin-top: 20px;
+  position: relative;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 30px;
+  color:AntiqueWhite;
+  margin-bottom: 10px;
+}
+
 .board {
   margin-top: 40px;
   display: grid;

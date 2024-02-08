@@ -1,6 +1,11 @@
 body {
-  background-color: teal;
-  font-family: 'Vast Shadow';
+  background-color: seagreen;
+  background-image: url("https://github.com/redhedredemption/project-1-match-game/blob/main/images/background.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: "Vast Shadow";
   color: AntiqueWhite;
   display: flex;
   flex-direction: column;
@@ -23,6 +28,7 @@ body {
   width: 100px;
   height: 100px;
   perspective: 1000px;
+  border-radius: 10px;
 
 }
 
@@ -48,10 +54,11 @@ body {
 }
 
 .front {
-  background-color: blue;
+  background-color: #63967A;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
   z-index: 2;
 }
 
@@ -81,7 +88,7 @@ body {
 
 #reset-button {
   display: block;
-  font-family: 'Vast Shadow';
+  font-family: "Vast Shadow";
   color: AntiqueWhite;
   background: darkslategrey;
   padding: 10px 20px;

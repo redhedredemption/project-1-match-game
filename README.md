@@ -1,6 +1,6 @@
 # 🐎Rootin Tootin Match Rodeo🤠
 
-Howdy, partners! Welcome to the Rootin Tootin Match Rodeo, where you'll need a sharp mind and a keen eye to match those cards before the sun sets on the wild west.
+Howdy, partners! Welcome to the [Rootin Tootin Match Rodeo](https://redhedredemption.github.io/project-1-match-game/), where you'll need a sharp mind and a keen eye to match those cards before the sun sets on the wild west.
 
 ## 🌵Game Description🌵
 Yeehaw! Rootin Tootin Match Rodeo is a classic concentration game with a western twist. Test your memory by flipping over pairs of cards to find matching images. Each correct match gets you closer to a win, but you're got to be a sharp-shooter. Watch out – you've only got 30 flips before the game's over!

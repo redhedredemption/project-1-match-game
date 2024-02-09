@@ -1,7 +1,7 @@
 body {
   background-color: #63967A;
   background-image: url("https://github.com/redhedredemption/project-1-match-game/blob/main/images/background%20v2.PNG?raw=true");
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-position: top;
   background-repeat: no-repeat;
@@ -9,11 +9,11 @@ body {
   color: AntiqueWhite;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+ justify-content: center;
   align-items: center; 
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0;
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0;
 }
 

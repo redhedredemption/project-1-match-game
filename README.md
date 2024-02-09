@@ -46,13 +46,13 @@ So saddle up, partner! Are you ready to test your memory in the wild west? Join 
 
 ## 🌵Screenshots🌵
 **Match!**
-    ![Card match](/images/card%20screenshot-match.PNG?raw=true "Card match")
+    ![Card match](https://github.com/redhedredemption/project-1-match-game/blob/main/images/screenshot%20match.PNG?raw=true "Card match")
 
 **Try again!**
-    ![Card mismatch](/images/card%20screenshot-try-again.PNG?raw=true "Card mismatch")
+    ![Card mismatch](https://github.com/redhedredemption/project-1-match-game/blob/main/images/screenshot%20try%20again.png?raw=true "Card mismatch")
 
 **You win!**
-    ![Game win](/images/card%20you-win.PNG?raw=true "Game win")
+    ![Game win](https://github.com/redhedredemption/project-1-match-game/blob/main/images/screenshot%20you%20win.PNG?raw=true "Game win")
 
 **Game over!**
-    ![Game loss](/images/card%20game-over.PNG?raw=true "Game loss")
+    ![Game loss](https://github.com/redhedredemption/project-1-match-game/blob/main/images/screenshot%20game%20over.PNG?raw=true "Game loss")

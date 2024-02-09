@@ -43,3 +43,16 @@ So saddle up, partner! Are you ready to test your memory in the wild west? Join 
 ## 🌵Future Enhancements🌵
 💠 Prevent player from clicking the same card twice in one turn, or don't allow multiple clicks to affect flip count.  
 💠 Invert "front" and "back" phrasing in the code, referring to card orientation.
+
+## 🌵Screenshots🌵
+**Match!**
+    ![Card match](/images/card%20screenshot-match.PNG?raw=true "Card match")
+
+**Try again!**
+    ![Card mismatch](/images/card%20screenshot-try-again.PNG?raw=true "Card mismatch")
+
+**You win!**
+    ![Game win](/images/card%20you-win.PNG?raw=true "Game win")
+
+**Game over!**
+    ![Game loss](/images/card%20game-over.PNG?raw=true "Game loss")

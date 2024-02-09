@@ -6,7 +6,6 @@ https://stackoverflow.com/questions/71013476/memory-card-game-stops-working-afte
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
   const cards = [// Array of cards with IDs
     { id: 1, imageUrl: "https://github.com/redhedredemption/project-1-match-game/blob/main/images/card%20amigos.PNG?raw=true" },
     { id: 2, imageUrl: "https://github.com/redhedredemption/project-1-match-game/blob/main/images/card%20cactus.PNG?raw=true" },
@@ -26,13 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: 8, imageUrl: "https://github.com/redhedredemption/project-1-match-game/blob/main/images/card%20longhorn.PNG?raw=true" }
   ];
 
-
   /*======================= DOM elements ===========================
   getElementById was suggested by several articles when I was looking for a way to create the game board/retrieve references to specific elements based on unique IDs. I used these articles for the syntax:
   https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
   https://www.w3schools.com/jsref/met_document_getelementbyid.asp
   */
-
 
   const board = document.getElementById("board"); // Board container
   const flipsCount = document.getElementById("flips-count"); // Flips count element
@@ -56,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
   ChatGPT  
   */
-
-
 
   // ============= Function to create a card DOM element =============
   function createCard(cardData) {
@@ -87,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return card; // Return the card created by the function
   }
 
-// ============ Function to handle card flipping ===============
+  // ============ Function to handle card flipping ===============
   function flipCard(card) {
     // return early if remaining flips is less or eq to 0
     if (remainingFlips <= 0) return;
@@ -105,8 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(remainingFlips <= 0, "Remaining Flips")
   }
 
-
-// ============= Function to check for card match ===========
+  // ============= Function to check for card match ===========
   function checkMatch() {
     const [card1, card2] = flippedCards; // Getting flipped cards from flipped cards array
 
@@ -124,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       showMessage("Game over!"); // Display game over message
     }
 
-// ========= Check if all cards are matched ==============
+    // ========= Check if all cards are matched ==============
     const allMatched = document.querySelectorAll(".card")
     const matchedArray = [...allMatched].every(card => card.classList.contains("flipped"))
     console.log(matchedArray); // I worked through this with the TA
@@ -134,14 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-// ========== Function to show messages in message box =========
+  // ========== Function to show messages in message box =========
   function showMessage(message) {
     messageBox.textContent = message; // Set the message text
     messageBox.style.display = "block"; // Display message box, when it's empty don't show it; source: https://www.w3schools.com/howto/howto_js_alert.asp
   }
 
-
-// ============== Function to reset the game ===============
+  // ============== Function to reset the game ===============
   function resetGame() {
     remainingFlips = 30; // Reset remaining flips count to 30
     flipsCount.textContent = remainingFlips; // Update flips count displayed on the page
